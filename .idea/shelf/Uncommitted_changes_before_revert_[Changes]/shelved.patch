@@ -1,0 +1,77 @@
+Index: app/src/main/java/com/example/testapp1_2026/screens/ProfileScreen.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.testapp1_2026.screens\r\n\r\nimport androidx.compose.foundation.Image\r\nimport androidx.compose.foundation.layout.Box\r\nimport androidx.compose.foundation.layout.Column\r\nimport androidx.compose.foundation.layout.Spacer\r\nimport androidx.compose.foundation.layout.fillMaxWidth\r\nimport androidx.compose.foundation.layout.height\r\nimport androidx.compose.foundation.layout.offset\r\nimport androidx.compose.foundation.layout.padding\r\nimport androidx.compose.foundation.rememberScrollState\r\nimport androidx.compose.foundation.verticalScroll\r\nimport androidx.compose.material.icons.Icons\r\nimport androidx.compose.material.icons.automirrored.filled.ArrowBack\r\nimport androidx.compose.material.icons.automirrored.filled.Logout\r\nimport androidx.compose.material3.ExperimentalMaterial3Api\r\nimport androidx.compose.material3.FloatingActionButton\r\nimport androidx.compose.material3.Icon\r\nimport androidx.compose.material3.IconButton\r\nimport androidx.compose.material3.LargeTopAppBar\r\nimport androidx.compose.material3.MaterialTheme\r\nimport androidx.compose.material3.Scaffold\r\nimport androidx.compose.material3.Text\r\nimport androidx.compose.material3.TopAppBar\r\nimport androidx.compose.material3.TopAppBarDefaults\r\nimport androidx.compose.runtime.Composable\r\nimport androidx.compose.runtime.mutableStateOf\r\nimport androidx.compose.runtime.remember\r\nimport androidx.compose.runtime.getValue\r\nimport androidx.compose.runtime.setValue\r\nimport androidx.compose.ui.Alignment\r\nimport androidx.compose.ui.Modifier\r\nimport androidx.compose.ui.draw.alpha\r\nimport androidx.compose.ui.graphics.Color\r\nimport androidx.compose.ui.input.nestedscroll.nestedScroll\r\nimport androidx.compose.ui.layout.ContentScale\r\nimport androidx.compose.ui.res.painterResource\r\nimport androidx.compose.ui.tooling.preview.Preview\r\nimport androidx.compose.ui.unit.dp\r\nimport androidx.compose.ui.unit.lerp\r\nimport androidx.compose.ui.unit.sp\r\nimport com.example.testapp1_2026.R\r\nimport com.example.testapp1_2026.components.ShowProfileField\r\nimport com.example.testapp1_2026.ui.theme.White\r\n\r\n\r\n\r\n@OptIn(ExperimentalMaterial3Api::class)\r\n@Composable\r\nfun ProfileScreen(){\r\n    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()\r\n\r\n    val fraction = scrollBehavior.state.collapsedFraction\r\n\r\n    var isEditable by remember { mutableStateOf(false) }\r\n\r\n    Scaffold(\r\n        modifier = Modifier\r\n            .nestedScroll(scrollBehavior.nestedScrollConnection)\r\n            .padding(),\r\n        topBar = {\r\n            LargeTopAppBar(\r\n                title = {\r\n                    Text(\r\n                        text = \"Username\",\r\n                        fontSize = lerp(24.sp, 20.sp, fraction),\r\n                        color = Color.White,\r\n                    )\r\n                },\r\n                navigationIcon = {\r\n                    IconButton(onClick = {}) {\r\n                        Icon(\r\n                            Icons.AutoMirrored.Filled.ArrowBack,\r\n                            contentDescription = \"Back\",\r\n                            tint = Color.White,\r\n                        )\r\n                    }\r\n                },\r\n                actions = {\r\n                  IconButton(onClick = {}) {\r\n                      Icon(\r\n                          Icons.AutoMirrored.Filled.Logout,\r\n                          contentDescription = \"Logout\",\r\n                          tint = Color.White,\r\n                      )\r\n                  }\r\n                },\r\n                colors = TopAppBarDefaults.largeTopAppBarColors(\r\n                    containerColor = Color.Transparent,\r\n                    scrolledContainerColor = Color.Blue,\r\n                ),\r\n                scrollBehavior = scrollBehavior\r\n            )\r\n        },\r\n        containerColor = Color.White\r\n    ) {\r\n        padding -> Box(modifier = Modifier.fillMaxWidth()){\r\n            Image(\r\n                painter = painterResource(R.drawable.ProfilePicture),\r\n                contentScale = ContentScale.Crop,\r\n                contentDescription = \"\",\r\n                modifier = Modifier\r\n                    .fillMaxWidth()\r\n                    .height(100.dp)\r\n                    .alpha(1f - fraction),\r\n            )\r\n        Column(\r\n            modifier = Modifier\r\n                .verticalScroll(rememberScrollState())\r\n                .padding(padding)\r\n        ) {\r\n            Spacer(modifier = Modifier.height(16.dp))\r\n            ShowProfileField(\"Number\", \"88005353535\", isEditable = isEditable)\r\n            ShowProfileField(\"Email\", \"email@gmail.com\", isEditable = isEditable)\r\n            ShowProfileField(\"Info\", \"info\", isEditable = isEditable)\r\n        }\r\n        FloatingActionButton(onClick = {},\r\n            containerColor = Color.Cyan,\r\n            modifier = Modifier\r\n                .padding(8.dp)\r\n                .align(Alignment.TopEnd)\r\n                .alpha(1f - fraction)\r\n                .offset(x = (-16.dp), y = 150.dp)\r\n        ){\r\n//            Icon(Icons.Default.CameraAlt, contentDescription = \"ProfilePicture\", tint = Color.White)\r\n        }\r\n    }\r\n    }\r\n}\r\n\r\n@Preview(showBackground = true, name = \"Profile\")\r\n@Composable\r\nfun ShowProfile(){\r\n    MaterialTheme{\r\n        ProfileScreen()\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/testapp1_2026/screens/ProfileScreen.kt b/app/src/main/java/com/example/testapp1_2026/screens/ProfileScreen.kt
+--- a/app/src/main/java/com/example/testapp1_2026/screens/ProfileScreen.kt	(revision ff30c7d38401ea12c5447657dd3c7b3779ae12b5)
++++ b/app/src/main/java/com/example/testapp1_2026/screens/ProfileScreen.kt	(date 1792517233162)
+@@ -95,15 +95,15 @@
+         containerColor = Color.White
+     ) {
+         padding -> Box(modifier = Modifier.fillMaxWidth()){
+-            Image(
+-                painter = painterResource(R.drawable.ProfilePicture),
+-                contentScale = ContentScale.Crop,
+-                contentDescription = "",
+-                modifier = Modifier
+-                    .fillMaxWidth()
+-                    .height(100.dp)
+-                    .alpha(1f - fraction),
+-            )
++//            Image(
++//                painter = painterResource(R.drawable.ProfilePicture),
++//                contentScale = ContentScale.Crop,
++//                contentDescription = "",
++//                modifier = Modifier
++//                    .fillMaxWidth()
++//                    .height(100.dp)
++//                    .alpha(1f - fraction),
++//            )
+         Column(
+             modifier = Modifier
+                 .verticalScroll(rememberScrollState())
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    alias(libs.plugins.android.application)\r\n    alias(libs.plugins.kotlin.android)\r\n    alias(libs.plugins.kotlin.compose)\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.testapp1_2026\"\r\n    compileSdk {\r\n        version = release(36)\r\n    }\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.testapp1_2026\"\r\n        minSdk = 24\r\n        targetSdk = 36\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_11\r\n        targetCompatibility = JavaVersion.VERSION_11\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"11\"\r\n    }\r\n    buildFeatures {\r\n        compose = true\r\n    }\r\n    composeOptions {\r\n        kotlinCompilerExtensionVersion = \"1.9.24\"\r\n    }\r\n\r\n}\r\n\r\ndependencies {\r\n    implementation(\"androidx.coordinatorlayout:coordinatorlayout:1.3.0\")\r\n    implementation(platform(\"androidx.compose:compose-bom:2026.09.00\"))\r\n    implementation(\"androidx.compose.ui:ui\")\r\n    implementation(\"androidx.compose.material3:material3\")\r\n    implementation(\"androidx.compose.ui:ui-tooling-preview\")\r\n    implementation(\"androidx.compose.material:material-icons-extended-android:1.7.8\")\r\n    implementation(libs.androidx.compose.foundation.layout)\r\n    debugImplementation(\"android.compose.ui:ui-tooling\")\r\n    implementation(\"androidx.activity:activity-compose:1.13.0\")\r\n    //----------------------------------------------------------\r\n    implementation(libs.androidx.core.ktx)\r\n    implementation(libs.androidx.lifecycle.runtime.ktx)\r\n    implementation(libs.androidx.activity.compose)\r\n    implementation(platform(libs.androidx.compose.bom))\r\n    implementation(libs.androidx.compose.ui)\r\n    implementation(libs.androidx.compose.ui.graphics)\r\n    implementation(libs.androidx.compose.ui.tooling.preview)\r\n    implementation(libs.androidx.compose.material3)\r\n    testImplementation(libs.junit)\r\n    androidTestImplementation(libs.androidx.junit)\r\n    androidTestImplementation(libs.androidx.espresso.core)\r\n    androidTestImplementation(platform(libs.androidx.compose.bom))\r\n    androidTestImplementation(libs.androidx.compose.ui.test.junit4)\r\n    debugImplementation(libs.androidx.compose.ui.tooling)\r\n    debugImplementation(libs.androidx.compose.ui.test.manifest)\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision ff30c7d38401ea12c5447657dd3c7b3779ae12b5)
++++ b/app/build.gradle.kts	(date 1792518263082)
+@@ -4,6 +4,7 @@
+     alias(libs.plugins.kotlin.compose)
+ }
+ 
++
+ android {
+     namespace = "com.example.testapp1_2026"
+     compileSdk {
+Index: .idea/deploymentTargetSelector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetSelector\">\r\n    <selectionStates>\r\n      <SelectionState runConfigName=\"app\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n      </SelectionState>\r\n    </selectionStates>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetSelector.xml b/.idea/deploymentTargetSelector.xml
+--- a/.idea/deploymentTargetSelector.xml	(revision ff30c7d38401ea12c5447657dd3c7b3779ae12b5)
++++ b/.idea/deploymentTargetSelector.xml	(date 1792517016826)
+@@ -5,6 +5,12 @@
+       <SelectionState runConfigName="app">
+         <option name="selectionMode" value="DROPDOWN" />
+       </SelectionState>
++      <SelectionState runConfigName="MainActivity">
++        <option name="selectionMode" value="DROPDOWN" />
++      </SelectionState>
++      <SelectionState runConfigName="ShowProfile">
++        <option name="selectionMode" value="DROPDOWN" />
++      </SelectionState>
+     </selectionStates>
+   </component>
+ </project>
+\ No newline at end of file
