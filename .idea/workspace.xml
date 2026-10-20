@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db23ff48-376b-4cc6-b427-e9d661d621a8" name="Changes" comment="Revert &quot;Revert &quot;feat TestApp screen UI&quot;&quot;&#10;&#10;This reverts commit 027c5aed" />
+    <list default="true" id="db23ff48-376b-4cc6-b427-e9d661d621a8" name="Changes" comment="create main branch" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,24 +33,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Just-Yak"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Just-Yak&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Just-Yak/SamsungInnovationCampus_bookameetingroom_app_test2_2026.git",
-    "accountId": "70c7aaea-e15a-4885-96bf-54055a31d446"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Just-Yak/SamsungInnovationCampus_bookameetingroom_app_test2_2026.git&quot;,
+    &quot;accountId&quot;: &quot;70c7aaea-e15a-4885-96bf-54055a31d446&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3KyAHGKLhRhej2L4TFlOtB7n1ep" />
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
@@ -69,7 +69,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "TestApp1.1__course",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -89,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792532308262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create main branch">
+      <option name="closed" value="true" />
+      <created>1792532961245</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792532961245</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +114,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="untracked files commit" />
     <MESSAGE value="Revert &quot;Revert &quot;feat TestApp screen UI&quot;&quot;&#10;&#10;This reverts commit 027c5aed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Revert &quot;feat TestApp screen UI&quot;&quot;&#10;&#10;This reverts commit 027c5aed" />
+    <MESSAGE value="create main branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="create main branch" />
   </component>
 </project>
